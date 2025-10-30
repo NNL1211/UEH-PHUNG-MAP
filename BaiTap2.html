@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Định dạng CSS - UEH</title>
+    <style>
+        /* Câu a: Đại học UEH */
+        .title-ueh {
+            color: blue;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+
+        /* Câu b: Khoa CNTTD */
+        .khoa-cnttd {
+            color: red;
+            text-align: right;
+            font-style: italic;
+            border: dotted yellow;
+            border-radius: 10px;
+            background-color: gray;
+            font-size: 15px;
+            opacity: 0.5;
+            padding: 10px;
+            display: inline-block;
+            float: right;
+        }
+
+        /* Câu c: BIT-UEH với text-shadow */
+        .bit-ueh {
+            color: green;
+            font-weight: bold;
+            font-size: 40px;
+            text-shadow: 2px 2px 4px orange, 
+                         0px 0px 10px yellow,
+                         -2px -2px 4px rgba(255, 165, 0, 0.5);
+            padding: 20px;
+            background: linear-gradient(to bottom, #ffffcc, #e6ffe6);
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        /* Câu d: Logo BIT làm hình nền */
+        body {
+            background-image: url('bit-logo.png');
+            background-size: 30px;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            /* Nếu không có file logo, bạn có thể dùng placeholder */
+        }
+
+        /* Câu e: Đoạn văn với overflow */
+        .paragraph-container {
+            margin-top: 50px;
+        }
+
+        /* i. Rộng 100px, Cao 50px, Ẩn nội dung khi bị tràn */
+        .paragraph-overflow-hidden {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            border: 1px solid black;
+            margin: 20px 0;
+        }
+
+        /* ii. Cắt nội dung bị tràn với chữ ... */
+        .paragraph-ellipsis {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border: 1px solid black;
+            margin: 20px 0;
+        }
+
+        /* iii. white-space: nowrap */
+        .paragraph-nowrap {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border: 1px solid black;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Câu a: Đại học UEH -->
+    <p class="title-ueh">Đại học UEH</p>
+
+    <br><br>
+
+    <!-- Câu b: Khoa CNTTD -->
+    <p class="khoa-cnttd">Khoa CNTTD</p>
+
+    <div style="clear: both;"></div>
+    <br><br>
+
+    <!-- Câu c: BIT-UEH với text-shadow -->
+    <p class="bit-ueh">BIT-UEH</p>
+
+    <br><br>
+
+    <!-- Câu e: Đoạn văn -->
+    <div class="paragraph-container">
+        <p><strong>Đoạn văn gốc:</strong></p>
+        <p>Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều</p>
+
+        <p><strong>i. Rộng: 100px; Cao: 50px; Ẩn nội dung khi bị tràn:</strong></p>
+        <div class="paragraph-overflow-hidden">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+        </div>
+
+        <p><strong>ii. Cắt nội dung bị tràn với chữ ...:</strong></p>
+        <div class="paragraph-ellipsis">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+        </div>
+
+        <p><strong>iii. white-space: nowrap:</strong></p>
+        <div class="paragraph-nowrap">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+        </div>
+    </div>
+</body>
+</html>
+

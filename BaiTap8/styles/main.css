@@ -1,0 +1,103 @@
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* i. Khung chứa lớn */
+#root {
+    width: 1024px;
+    margin: 0 auto; /* Căn lề giữa */
+}
+
+/* ii. site-header */
+#site-header {
+    text-align: center; /* Căn lề giữa */
+    margin: 20px 0;
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Background màu */
+    background-image: url('../imgs/logo.png'); /* Hình logo */
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 40px;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px 15px 60px;
+    display: inline-block;
+    width: 100%;
+}
+
+#site-header span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Danh sách superheroes */
+.superheroes {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* iii. li trong superheroes */
+.superheroes li {
+    width: 180px; /* Chiều rộng mặc định */
+    display: inline-block;
+    position: relative;
+    transition: width 0.3s ease; /* Hiệu ứng chuyển đổi */
+    margin: 0 5px;
+}
+
+/* iv. Hình trong superheroes */
+.superheroes li img {
+    border: 2px solid #333;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tên hero ở góc trên trái */
+.superheroes li .hero-header {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    font-size: 12px;
+    z-index: 2;
+}
+
+/* v. Thẻ a trong superheroes */
+.superheroes li a {
+    display: none; /* Ẩn mặc định */
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background-color: #555;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* vi. Hover effects */
+.superheroes li:hover {
+    width: 200px; /* Tăng chiều rộng khi hover */
+}
+
+.superheroes li:hover a {
+    display: block; /* Hiển thị Read more */
+    text-decoration: underline; /* Hiển thị underline */
+}
+
